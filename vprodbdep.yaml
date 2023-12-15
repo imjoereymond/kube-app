@@ -17,6 +17,8 @@ spec:
       containers:
         - name: vprodb
           image: imjoereymond/vprofiledb:latest
+          securityContext:
+            runAsUser: 999
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: vpro-db-data
