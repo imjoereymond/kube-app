@@ -25,10 +25,7 @@ spec:
           containerPort: 3306
         env:
         - name: MYSQL_ROOT_PASSWORD
-          valueForm:
-            secretKeyRef:
-              name: app-secret
-              key: vprodbpass
+          key: vprodbpass
       nodeSelector:
         zone: us-east-1a
       volumes:
